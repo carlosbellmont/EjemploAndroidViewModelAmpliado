@@ -16,9 +16,19 @@ class MainActivityViewModel  : ViewModel() {
             Film(4, "Una Nueva Esperanza", "aaaa"),
             Film(5, "El Imperio Contraataca", "aaaa"),
             Film(6, "El Retorno del Jedi", "aaaa"),
-            Film(4, "El Despertar de la Fuerza", "aaaa"),
-            Film(5, "Los Útimos Jedi", "aaaa"),
-            Film(6, "El Ascenso de Skywalker", "aaaa")
+            Film(7, "El Despertar de la Fuerza", "aaaa"),
+            Film(8, "Los Útimos Jedi", "aaaa"),
+            Film(9, "El Ascenso de Skywalker", "aaaa")
         ))
+    }
+
+    fun download1to3() : List<Film> {
+        return films.subList(0,3)
+    }
+    fun download4to6() : List<Film> {
+        return films.subList(3,6)
+    }
+    fun download7to9() : List<Film> {
+        return films.subList(6,9)
     }
 }

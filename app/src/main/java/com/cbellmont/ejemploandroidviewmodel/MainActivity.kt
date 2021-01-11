@@ -26,6 +26,29 @@ class MainActivity : AppCompatActivity() {
             binding.tvFilms.append("${it.name}\n")
         }
 
+        binding.button1.setOnClickListener {
+            binding.tvFilms.text =""
+
+            model.download1to3().forEach {
+                binding.tvFilms.append("${it.name}\n")
+            }
+        }
+
+        binding.button2.setOnClickListener {
+            binding.tvFilms.text =""
+
+            model.download4to6().forEach {
+                binding.tvFilms.append("${it.name}\n")
+            }
+        }
+
+        binding.button3.setOnClickListener {
+            binding.tvFilms.text =""
+
+            model.download7to9().forEach {
+                binding.tvFilms.append("${it.name}\n")
+            }
+        }
     }
 
 }
